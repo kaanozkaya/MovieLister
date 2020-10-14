@@ -34,7 +34,7 @@ public class WebService {
       enqueue(webServiceInterface.searchMovie(queryText, API_KEY), listener);
    }
 
-   public void getMovieDetails(int id, OnCompleteListener<MovieDetails> listener) {
+   public void queryMovieDetails(int id, OnCompleteListener<MovieDetails> listener) {
       enqueue(webServiceInterface.queryMovieDetails(id, "videos,credits", API_KEY), listener);
    }
 

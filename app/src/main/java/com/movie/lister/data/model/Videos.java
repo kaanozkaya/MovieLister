@@ -9,14 +9,14 @@ import java.util.List;
 public class Videos {
 
     @Expose
-    private List<Result> results;
+    private List<Video> videos;
 
-    public List<Result> getResults() {
-        return results;
+    public List<Video> getVideos() {
+        return videos;
     }
 
-    public void setResults(List<Result> results) {
-        this.results = results;
+    public void setVideos(List<Video> videos) {
+        this.videos = videos;
     }
 
 }

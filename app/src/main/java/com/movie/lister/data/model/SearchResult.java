@@ -17,7 +17,7 @@ public class SearchResult {
    private Integer totalPages;
    @SerializedName("results")
    @Expose
-   private List<Movie> movies = null;
+   private List<Movie> movies;
 
    public Integer getPage() {
       return page;

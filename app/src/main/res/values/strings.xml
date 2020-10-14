@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">MovieLister</string>
+    <string name="app_name">Movie Lister</string>
+    <string name="search_hint">Movie Name</string>
+    <string name="title_and_date">%s - %s</string>
+    <string name="overview">Overview</string>
+    <string name="genres">Genres</string>
+    <string name="vote_average_and_count">%.1f/10 From %d Votes</string>
+    <string name="runtime">Runtime</string>
+    <string name="rating">Rating</string>
+    <string name="director">Director</string>
+    <string name="starring">Starring</string>
 </resources>

@@ -4,7 +4,7 @@ package com.movie.lister.data.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Result {
+public class Video {
 
     @Expose
     private String id;

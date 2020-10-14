@@ -3,16 +3,16 @@ package com.movie.lister.data.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Locale;
 
 public class Movie {
-   @SerializedName("popularity")
    @Expose
    private Double popularity;
-   @SerializedName("id")
    @Expose
    private Integer id;
-   @SerializedName("video")
    @Expose
    private Boolean video;
    @SerializedName("vote_count")
@@ -21,7 +21,6 @@ public class Movie {
    @SerializedName("vote_average")
    @Expose
    private Double voteAverage;
-   @SerializedName("title")
    @Expose
    private String title;
    @SerializedName("release_date")
@@ -39,10 +38,8 @@ public class Movie {
    @SerializedName("backdrop_path")
    @Expose
    private String backdropPath;
-   @SerializedName("adult")
    @Expose
    private Boolean adult;
-   @SerializedName("overview")
    @Expose
    private String overview;
    @SerializedName("poster_path")
@@ -99,6 +96,17 @@ public class Movie {
 
    public String getReleaseDate() {
       return releaseDate;
+   }
+
+   public String getFormattedReleaseDate(){
+      if (releaseDate == null || releaseDate.isEmpty())
+         return "";
+      try {
+         return new SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(new SimpleDateFormat("yyyy-MM-dd",Locale.ENGLISH).parse(releaseDate));
+      } catch (ParseException e) {
+         e.printStackTrace();
+         return "";
+      }
    }
 
    public void setReleaseDate(String releaseDate) {
